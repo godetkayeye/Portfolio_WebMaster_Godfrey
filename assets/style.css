@@ -1,0 +1,308 @@
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4500;
+}
+
+/* Menu burger */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+/* Section éducation */
+.education-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Timeline principale */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Ligne centrale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #007bff, #28a745, #6f42c1);
+    transform: translateX(-50%);
+}
+
+/* Élément individuel de la timeline */
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Effet d'apparition */
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alternance gauche/droite */
+.timeline-item:nth-child(odd) .timeline-content {
+    text-align: left;
+    order: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    text-align: right;
+    order: -1;
+}
+
+/* Boîte de contenu */
+.timeline-content {
+    width: 45%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+/* Icône */
+.icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Positionnement des dates */
+.timeline-item .timeline-date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    font-weight: bold;
+    padding: 5px 15px;
+    font-size: 14px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Différenciation des couleurs des dates */
+.timeline-item:nth-child(odd) .timeline-date {
+    background: #007bff;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    background: #28a745;
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.blue { background-color: #007bff; }
+.green { background-color: #28a745; }
+.purple { background-color: #6f42c1; }
+
+/* Responsive : tout en colonne sur mobile */
+@media screen and (max-width: 768px) {
+    /* Menu burger */
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        background: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-item .timeline-date {
+        left: 20px;
+        transform: translateY(-50%);
+    }
+
+    .timeline-content {
+        width: 90%;
+        margin-left: 40px;
+        text-align: left;
+    }
+}
+
+/* Bac +3 reste à droite */
+.timeline-item.bac3 {
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.timeline-item.bac3 .timeline-content {
+    order: -1;
+    text-align: right;
+}
+
+/* Forcer certains éléments à droite */
+.timeline-item.align-right {
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.timeline-item.align-right .timeline-content {
+    order: -1;
+    text-align: right;
+}
+@media screen and (max-width: 768px) {
+    /* Réorganisation de la timeline en colonne */
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    /* Ajustement de la ligne centrale */
+    .timeline::before {
+        left: 10px;
+    }
+
+    /* Correction de la position des dates */
+    .timeline-item .timeline-date {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        background: transparent;
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        padding: 0;
+        box-shadow: none;
+        display: block;
+    }
+
+    /* Réajustement du contenu */
+    .timeline-content {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    /* Uniformisation de l'affichage */
+    .timeline-item .timeline-date::before {
+        content: "📅 ";
+        font-size: 14px;
+        color: #007bff;
+    }
+}
