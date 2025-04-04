@@ -19,29 +19,38 @@
         </div>
         <nav>
             <ul>
-                <li><a href="documents/CV.pdf" target="_blank">CV</a></li>
+                <li><a href="Curriculum Vitae.php">CV</a></li>
                 <li><a href="#">Projets</a></li>
-                <li><a href="#">Contact</a></li>
                 <li><a href="education.php">Education</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
+    <div class="hero-content">
         <div class="profile">
             <img src="img/img1.jpeg" alt="godet kayeye">
         </div>
         <div class="intro">
-            <h1>Salut !</h1>
-            <p><strong>À propos de moi</strong></p>
-            <p>Développeur Fullstack passionné par le <strong>web et l'innovation</strong>, j'aime concevoir des <strong>applications performantes</strong> et intuitives en combinant <strong>Symfony</strong> et <strong>React</strong>. Cet espace est dédié à mes projets et à mon expertise en développement.</p>
+            <h1>Salut ! 👋</h1>
+            <p class="title">À propos de moi</p>
+            <p class="description">
+                Développeur Fullstack passionné par le <strong>web et l'innovation</strong>, 
+                j'aime concevoir des <strong>applications performantes</strong> et intuitives 
+                en combinant <strong>Symfony</strong> et <strong>React</strong>. 
+                Cet espace est dédié à mes projets et à mon expertise en développement.
+            </p>
             <div class="buttons">
-                <a href="documents/CV.pdf" class="btn yellow" target="_blank">CV</a>
+                <a href="Curriculum Vitae.php" class="btn yellow">CV</a>
                 <a href="#" class="btn red">Projets</a>
-                <a href="#" class="btn blue">Contact</a>
+                <a href="education.php" class="btn blue">Education</a>
+                <a href="mailto:godetkayeye07@gmail.com" class="btn blue">Me contacter</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <footer>
         <div class="contact-info">
@@ -50,8 +59,8 @@
         </div>
         <div class="social-media">
             <p><strong>Suivez-moi :</strong></p>
-            <a href="#"><img src="img/linkedin.svg" alt="LinkedIn"></a>
-            <a href="#"><img src="img/twitter.svg" alt="Twitter"></a>
+            <a href="https://linkedin.com/in/godefroid-kayeye" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com/Godetkayeye" target="_blank"><img src="img/twitter.svg" alt="Twitter"></a>
         </div>
         <div class="legal">
             <p>© 2025 Kayeye Godefroid - Tous droits réservés</p>

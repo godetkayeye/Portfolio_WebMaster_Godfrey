@@ -25,7 +25,7 @@
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="documents/CV.pdf" target="_blank">CV</a></li>
+                <li><a href="Curriculum Vitae.php">Cv</a></li>
                 <li><a href="#">Projets</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>

@@ -18,20 +18,36 @@ body {
     justify-content: center;
 }
 
-/* En-tête */
+/* ========== EN-TÊTE ========== */
 header {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     background: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
+
+    position: fixed; /* Fixe le header en haut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Assure que le header reste au-dessus du contenu */
 }
 
+/* Ajoute un espace sous le header pour éviter qu'il ne cache le contenu */
+body {
+    padding-top: 80px; /* Ajuste selon la hauteur du header */
+}
+
+/* Logo */
 .logo {
     font-size: 22px;
     font-weight: 700;
+    color: black;
+    text-decoration: none;
 }
 
 /* Navigation */
@@ -54,7 +70,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-weight: 400;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -62,7 +78,7 @@ nav ul li a:hover {
     color: #ff4500;
 }
 
-/* Menu burger */
+/* ========== MENU BURGER (Mobile) ========== */
 .menu-toggle {
     display: none;
     font-size: 30px;
@@ -81,7 +97,7 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-/* Classes pour animer l'icône du menu */
+/* Animation du menu burger */
 .menu-toggle.active span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
 }
@@ -93,72 +109,99 @@ nav ul li a:hover {
 .menu-toggle.active span:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
 }
-/* Section principale */
+
+/* SECTION HERO */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
     text-align: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: #f4f6f9;
 }
 
+/* Conteneur principal */
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Réduction de l'espace entre l'image et le texte */
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Image de profil */
 .profile img {
-    width: 250px;
+    width: 250px; /* Taille de l’image ajustée */
     height: 250px;
-    border-radius: 50%;
-    border: 5px solid #ddd;
     object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd;
 }
 
+/* Texte d'introduction */
+.intro {
+    text-align: left;
+    max-width: 500px;
+}
+
+/* Titres */
 .intro h1 {
-    font-size: 40px;
-    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.intro p {
-    max-width: 400px;
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.description {
     font-size: 16px;
+    color: #555;
     line-height: 1.5;
 }
 
+/* BOUTONS */
 .buttons {
-    margin-top: 20px;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .btn {
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 50px;
-    display: inline-block;
-    margin: 5px;
-    transition: transform 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
 }
 
-.btn:hover {
-    transform: scale(1.05);
+.btn.yellow { background-color: #ffc107; color: #000; }
+.btn.red { background-color: #ff4500; color: #fff; }
+.btn.blue { background-color: #17a2b8; color: #fff; }
+.btn:hover { opacity: 0.8; }
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .intro {
+        text-align: center;
+    }
 }
 
-/* Couleurs des boutons */
-.yellow {
-    background: #ffcc00;
-    color: black;
-}
-
-.red {
-    background: #ff4500;
-    color: white;
-}
-
-.blue {
-    background: #6ec6c7;
-    color: white;
-}
-
-/* Pied de page */
+/* ========== PIED DE PAGE ========== */
 footer {
     display: flex;
     justify-content: space-between;
@@ -169,14 +212,18 @@ footer {
     color: white;
     text-align: center;
     width: 100%;
-    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
     margin-top: auto; /* Assure que le footer colle bien en bas */
 }
 
+/* Informations de contact */
 .contact-info p, .legal p {
     margin: 5px 0;
 }
 
+/* Réseaux sociaux */
 .social-media {
     display: flex;
     align-items: center;
@@ -193,6 +240,7 @@ footer {
     transform: scale(1.2);
 }
 
+/* Liens */
 a {
     color: white;
     text-decoration: none;
@@ -202,22 +250,29 @@ a:hover {
     text-decoration: underline;
 }
 
-/* RESPONSIVE DESIGN */
+/* ========== RESPONSIVE DESIGN ========== */
 @media screen and (max-width: 768px) {
+    /* Ajuste le padding du header */
     header {
         padding: 15px;
     }
 
+    /* Affiche le menu burger */
     .menu-toggle {
         display: block;
+        position: absolute;
+        top: 15px;
+        right: 45px;
+        z-index: 1000;
     }
 
+    /* Menu mobile */
     nav ul {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 15px;
+        right: 45px;
         background: white;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         padding: 15px;
@@ -228,6 +283,7 @@ a:hover {
         display: flex;
     }
 
+    /* Ajuste la disposition de la section principale */
     .hero {
         flex-direction: column;
         text-align: center;
@@ -242,12 +298,23 @@ a:hover {
         font-size: 30px;
     }
 
+    /* Ajuste le footer */
     footer {
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
 }
+
 /* Boutons en ligne même en mobile */
 .buttons {
     display: flex;
@@ -261,3 +328,8 @@ a:hover {
     text-align: center; /* Centre le texte */
     min-width: 100px; /* Empêche les boutons d'être trop petits */
 }
+
+chatgpt-sidebar{
+    display: none !important;
+}
+
