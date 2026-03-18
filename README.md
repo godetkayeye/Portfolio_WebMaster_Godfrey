@@ -23,14 +23,14 @@ npm run dev
 
 ## Variable d’environnement (formulaire de contact)
 
-- **`WEB3FORMS_ACCESS_KEY`**: clé Web3Forms utilisée par l’endpoint Next.js `POST /api/contact`.
+- **`NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`**: clé Web3Forms utilisée côté navigateur (Web3Forms gratuit ne supporte pas l’envoi côté serveur).
 
 ## Déploiement gratuit sur Vercel
 
 - Pousser ce repo sur GitHub
 - Dans Vercel: **New Project** → Import GitHub repo
 - Dans **Settings → Environment Variables**, ajouter:
-  - `WEB3FORMS_ACCESS_KEY` = ta clé Web3Forms
+  - `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` = ta clé Web3Forms
 - Déployer
 
 ## Notes

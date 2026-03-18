@@ -63,14 +63,27 @@ export function HomeClient() {
       sendBtn.innerHTML = "Envoi en cours...";
 
       try {
+        const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+        if (!accessKey) {
+          window.Swal?.fire?.({
+            icon: "error",
+            title: "Configuration manquante",
+            text: "NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY n'est pas défini.",
+            confirmButtonColor: "#3b82f6",
+            confirmButtonText: "Fermer",
+          });
+          return;
+        }
+
         const body = {
+          access_key: accessKey,
           name: (document.getElementById("name") as HTMLInputElement | null)?.value ?? "",
           email: (document.getElementById("email") as HTMLInputElement | null)?.value ?? "",
           subject: (document.getElementById("subject") as HTMLInputElement | null)?.value ?? "",
           message: (document.getElementById("message") as HTMLTextAreaElement | null)?.value ?? "",
         };
 
-        const response = await fetch("/api/contact", {
+        const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify(body),
