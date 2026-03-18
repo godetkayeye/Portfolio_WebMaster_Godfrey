@@ -11,12 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="text-gray-700">
+    <!-- Bouton Retour -->
+    <div class="max-w-4xl mx-auto px-4 pt-6">
+        <a href="index.php" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold mb-6 transition-colors">
+            <i class="fas fa-arrow-left mr-2"></i> Retour à la page d'accueil
+        </a>
+    </div>
+
     <div class="max-w-4xl mx-auto my-8 px-4">
         <!-- Header -->
         <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
             <div class="md:flex">
                 <div class="md:w-1/3 p-6 flex justify-center items-center bg-blue-50">
-                    <img src="img/img1.jpeg" alt="Photo de profil" class="w-48 h-48 rounded-full object-cover border-4 border-blue-500 shadow-md">
+                    <img src="img/photo.jpeg" alt="Photo de profil" class="w-48 h-48 rounded-full object-cover border-4 border-blue-500 shadow-md">
                 </div>
                 <div class="md:w-2/3 p-6">
                     <h1 class="text-3xl font-bold text-gray-800 mb-2">KAYEYE MUKWA Godefroid</h1>
@@ -45,7 +52,7 @@
                         <a href="https://linkedin.com/in/godefroid-kayeye" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full flex items-center">
                             <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
                         </a>
-                        <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-full flex items-center">
+                        <a href="https://x.com/Godefroidkayeye" class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-full flex items-center">
                             <i class="fab fa-twitter mr-2"></i> Twitter
                         </a>
                     </div>
@@ -60,7 +67,7 @@
                 <!-- About -->
                 <div class="bg-white rounded-xl shadow-md p-6">
                     <h2 class="text-xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">À propos</h2>
-                    <p class="text-gray-600">Développeur passionné avec 6 ans d'expérience en PHP et 5 ans en Trust & Safety Engineering. Expert en création d'applications web robustes et performantes.</p>
+                    <p class="text-gray-600">Développeur fullstack passionné, spécialisé en web et mobile. Fort de 9 ans d'expérience en PHP et expertise en Trust & Safety, je crée des applications performantes et intuitives avec les dernières technologies (Symfony, NestJS, React, Next.js, React Native).</p>
                 </div>
 
                 <!-- Skills -->
@@ -90,6 +97,15 @@
                             </div>
                             <div>
                                 <div class="flex justify-between mb-1">
+                                    <span>TypeScript</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
                                     <span>HTML/CSS</span>
                                     <span>90%</span>
                                 </div>
@@ -101,10 +117,13 @@
                     </div>
                     
                     <div class="mb-4">
-                        <h3 class="font-semibold mb-2">Frameworks</h3>
+                        <h3 class="font-semibold mb-2">Frameworks & Librairies</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Symfony</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">NestJS</span>
                             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Next.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React Native</span>
                             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bootstrap</span>
                             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
                         </div>
@@ -114,6 +133,7 @@
                         <h3 class="font-semibold mb-2">Bases de données</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
                             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SQL Server</span>
                         </div>
                     </div>
@@ -185,11 +205,11 @@
                                     </span>
                                 </div>
                                 <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                                    <li>Développement d'un système de gestion de courriers avec Symfony</li>
-                                    <li>Implémentation d'un système de présence basé sur des badges RFID</li>
-                                    <li>Développement d'un module de gestion des hospitalisations (<a href="https://saintpiere.startradingsarl.org/" class="text-blue-500 hover:underline">saintpiere.startradingsarl.org</a>)</li>
-                                    <li>Développement d'une interface utilisateur dynamique avec React</li>
-                                    <li>Développement d'un site web pour l'institut National du Batiment & des Travaux Publics (<a href="https://inbtp.ac.cd/" class="text-blue-500 hover:underline">inbtp.ac.cd</a>)</li>
+                                    <li>Conception et développement d'une plateforme complète de gestion de courriers avec Symfony, intégrant workflow documentaire et archivage numérique</li>
+                                    <li>Implémentation d'un système innovant de gestion de présence avec technologie RFID, optimisant le suivi temps-présence en temps réel</li>
+                                    <li>Développement d'un module complet de gestion hospitalière intégrant gestion des patients, dossiers médicaux et suivi des hospitalisations </li>
+                                    <li>Création d'interfaces utilisateur performantes et réactives avec React, garantissant une expérience utilisateur fluide et moderne</li>
+                                    <li>Conception et développement du site institutionnel de l'INBTP, plateforme vitrine mettant en valeur les programmes et ressources de formation </li>
                                 </ul>
                             </div>
                         </div>

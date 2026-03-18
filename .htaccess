@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /Portfolio_WebMaster_Godfrey/
+    
+    # Ne pas réécrire si c'est un vrai fichier ou répertoire
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Réécrire internement vers .php si le fichier existe
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+?)/?$ $1.php [QSA,L]
+</IfModule>
