@@ -317,7 +317,6 @@ export default function Home() {
 <section id="education" class="py-16 bg-slate-50 px-6">
   <div class="container mx-auto">
     <h2 class="text-3xl font-bold text-center mb-12 section-title">Mon Parcours</h2>
-    <p class="text-center text-slate-600 mb-8"><a href="/education" class="text-blue-600 hover:underline">Voir la page Éducation complète</a></p>
   </div>
 </section>
 
