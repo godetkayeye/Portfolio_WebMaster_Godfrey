@@ -1,4 +1,5 @@
 import { HomeClient } from "./_components/HomeClient";
+import { DynamicGreeting } from "./_components/DynamicGreeting";
 
 export default function Home() {
   return (
@@ -67,7 +68,7 @@ export default function Home() {
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-0">
           <div className="md:w-1/2 mb-12 md:mb-0 md:pr-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Bonjour, je suis <span className="gradient-text">Godefroid Kayeye</span>
+              <DynamicGreeting />, je suis <span className="gradient-text">Godefroid Kayeye</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-slate-600 mb-6">
               Développeur Fullstack Web & Mobile
